@@ -1,0 +1,41 @@
+[
+  {
+    "q": "Qual palavra está corretamente acentuada de acordo com as regras da língua portuguesa?",
+    "options": [
+      "Heroi",
+      "Ideia",
+      "Pôde",
+      "Voce",
+      "Juri"
+    ],
+    "answer": 2,
+    "explanation": "'Pôde' está corretamente acentuada como o passado de 'pode'.",
+    "tip": "Mnemônico: 'pôde' com acento indica o passado de 'pode'."
+  },
+  {
+    "q": "Qual das palavras deve levar acento gráfico segundo a nova ortografia?",
+    "options": [
+      "Feiura",
+      "Linguiça",
+      "Paranoico",
+      "Heroico",
+      "Jibóia"
+    ],
+    "answer": 1,
+    "explanation": "'Linguiça' leva acento na letra 'i' por ser paroxítona terminada em ditongo.",
+    "tip": "Dica: palavras paroxítonas terminadas em ditongos orais levam acento."
+  },
+  {
+    "q": "Por que a palavra 'vôo' perdeu o acento gráfico?",
+    "options": [
+      "Não é mais acentuada por convenção",
+      "É oxítona",
+      "Nova regra exclui o acento em palavras com 'oo'",
+      "Regra do hiato",
+      "É monossílaba tônica"
+    ],
+    "answer": 2,
+    "explanation": "A reforma ortográfica eliminou o acento de palavras com dupla vogal idêntica, como 'vôo' -> 'voo'.",
+    "tip": "Dica: 'vôo', 'enjôo' -> sem acento após a reforma (vogais dobradas)."
+  }
+]

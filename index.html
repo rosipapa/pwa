@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz PWA - Acentuação Gráfica</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4a90e2" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f7fa; }
+    #quiz-container { max-width: 700px; margin: auto; background: white; padding: 2em; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    button { padding: 10px 15px; margin-top: 1em; }
+    .option { display: block; margin: 0.5em 0; }
+    .correct { background: #d4edda; }
+    .wrong { background: #f8d7da; }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Quiz Interativo: Acentuação Gráfica</h1>
+    <div id="question"></div>
+    <div id="options"></div>
+    <div id="explanation"></div>
+    <button id="next" style="display:none;">Próxima Pergunta</button>
+  </div>
+  <script>
+    let currentQuestion = 0;
+    let questions = [];
+
+    fetch('questions.json')
+      .then(response => response.json())
+      .then(data => {
+        questions = data.sort(() => Math.random() - 0.5);
+        showQuestion();
+      });
+
+    function showQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById('question').innerHTML = "<strong>" + q.q + "</strong>";
+      const optionsDiv = document.getElementById('options');
+      optionsDiv.innerHTML = "";
+      document.getElementById('explanation').innerHTML = "";
+      document.getElementById('next').style.display = "none";
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.innerText = opt;
+        btn.className = "option";
+        btn.onclick = () => {
+          if (index === q.answer) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("wrong");
+            optionsDiv.children[q.answer].classList.add("correct");
+          }
+          document.getElementById('explanation').innerHTML = "<p><strong>Explicação:</strong> " + q.explanation + "<br><strong>Dica:</strong> " + q.tip + "</p>";
+          document.getElementById('next').style.display = "block";
+        };
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    document.getElementById("next").onclick = () => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        document.getElementById('quiz-container').innerHTML = "<h2>Fim do quiz! Você completou todas as perguntas.</h2>";
+      }
+    };
+  </script>
+</body>
+</html>
