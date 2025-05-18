@@ -11,5 +11,5 @@ const questions = [
     answer: 1,
     explanation: "‘Voo’ perdeu o acento com a reforma ortográfica."
   }
-  // ← Adicione mais perguntas aqui nesse formato!
+  
 ];
