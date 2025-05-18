@@ -17,15 +17,24 @@
   </header>
 
   <main id="quiz-container">
-    <!-- As perguntas aparecem aqui -->
+    <!-- Perguntas serão inseridas dinamicamente aqui -->
   </main>
 
+  <div id="results" style="display: none;">
+    <h2>Resultado Final</h2>
+    <p id="final-score"></p>
+    <p id="final-time"></p>
+  </div>
+
   <footer>
-    <button id="skip-btn">Pular</button>
-    <button id="next-btn">Próxima</button>
+    <div class="button-group">
+      <button id="skip-btn">Pular</button>
+      <button id="next-btn">Próxima</button>
+    </div>
   </footer>
 
-  <script src="questions.js"></script>
-  <script src="script.js"></script>
+  <script src="questions.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
+
