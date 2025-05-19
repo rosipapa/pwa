@@ -241,7 +241,7 @@
     level: "C1"
   },
 
-[
+
   {
     q: "Choose the correct sentence:",
     options: [
@@ -755,9 +755,6 @@
   explanation: "'It was John who...' é uma cleft sentence usada para dar ênfase.",
   level: "C2"
 }
-
-
-
 
 
 
