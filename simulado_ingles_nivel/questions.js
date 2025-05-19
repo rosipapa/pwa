@@ -364,9 +364,6 @@
   },
 
 
-
-
-
 {
   q: "Choose the correct sentence:",
   options: [
@@ -759,6 +756,6 @@
 
 
 
-]
+];
 
 
