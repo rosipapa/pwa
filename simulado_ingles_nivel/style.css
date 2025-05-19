@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.app {
+  background: white;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  padding: 30px 25px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #0e639c;
+}
+
+#timer, #score, #question-counter {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #555;
+}
+
+#quiz-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.question-text {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.options {
+  list-style: none;
+  padding-left: 0;
+}
+
+.options li {
+  margin-bottom: 12px;
+}
+
+.options button {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #0e639c;
+  border-radius: 5px;
+  background: white;
+  color: #0e639c;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options button:hover:not(:disabled) {
+  background-color: #dbefff;
+}
+
+.options button.correct {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  cursor: default;
+}
+
+.options button.wrong {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+  cursor: default;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  background-color: #0e639c;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:disabled {
+  background-color: #7ea7c7;
+  cursor: not-allowed;
+}
+
+.buttons button:hover:not(:disabled) {
+  background-color: #064973;
+}
+
+.hidden {
+  display: none;
+}
+
+#result h2 {
+  color: #0e639c;
+  margin-bottom: 15px;
+}
+
+#result p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
