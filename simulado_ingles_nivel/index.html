@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simulado de Inglês - Classificação B2, C1, C2</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0e639c"/>
+  <meta name="theme-color" content="#0e639c" />
 </head>
 <body>
-  <div class="app">
-    <h1>Simulado de Inglês</h1>
-    <div id="timer">Tempo: 0s</div>
-    <div id="score">Acertos: 0 | Erros: 0</div>
-    <div id="question-counter"></div>
+  <main class="app" role="main" aria-labelledby="app-title">
+    <h1 id="app-title">Simulado de Inglês</h1>
 
-    <div id="quiz-container"></div>
+    <section aria-live="polite" aria-atomic="true" class="status-bar">
+      <div id="timer" aria-label="Cronômetro">Tempo: 0s</div>
+      <div id="score" aria-label="Pontuação">Acertos: 0 | Erros: 0</div>
+      <div id="question-counter" aria-label="Contador de perguntas"></div>
+    </section>
 
-    <div class="buttons">
-      <button id="skip-btn">Pular</button>
-      <button id="next-btn" disabled>Próxima</button>
-    </div>
+    <section id="quiz-container" tabindex="0" aria-describedby="question-counter"></section>
 
-    <div id="result" class="hidden">
+    <nav class="buttons" aria-label="Controles do simulado">
+      <button id="skip-btn" type="button">Pular</button>
+      <button id="next-btn" type="button" disabled>Próxima</button>
+    </nav>
+
+    <section id="result" class="hidden" aria-live="polite" aria-atomic="true">
       <h2>Resultado Final</h2>
       <p id="final-score"></p>
       <p id="level-estimate"></p>
-      <button id="restart-btn">Reiniciar</button>
-    </div>
-  </div>
+      <button id="restart-btn" type="button">Reiniciar</button>
+    </section>
+  </main>
 
   <script src="questions.js"></script>
   <script src="script.js"></script>
@@ -43,3 +46,4 @@
   </script>
 </body>
 </html>
+
